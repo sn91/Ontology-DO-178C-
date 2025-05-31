@@ -1,0 +1,1405 @@
+@prefix : <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/> .
+
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Description
+:Description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Change_Impact
+:Change_Impact rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)> ;
+               rdfs:range <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description> ,
+                          <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Configuration_Index(SCI)> ,
+                          <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Verification_Result_(SVR)> ,
+                          :Executable_Object_Code ,
+                          :SW_Accomplishment_Summary ,
+                          :SW_Verification_Cases_and_Procedures ,
+                          :Source_Code ,
+                          :Trace_Data .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#complies_&_robust_with
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#complies_&_robust_with> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:domain :Executable_Object_Code ;
+                                                                                                 rdfs:range :SW_High_Level_Requirements ,
+                                                                                                            :SW_Low_Level_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Compatible_with
+:Compatible_with rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description> ;
+                 rdfs:range :SW_High_Level_Requirements ,
+                            :Target_Computer .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Comply_with
+:Comply_with rdf:type owl:ObjectProperty ;
+             rdfs:domain :SW_High_Level_Requirements ;
+             rdfs:range :System_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Conforms_to
+:Conforms_to rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description> ;
+             rdfs:range :SW_Design_Standard .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Loaded_in
+:Loaded_in rdf:type owl:ObjectProperty ;
+           rdfs:domain :Executable_Object_Code ,
+                       :Parameter_Data_Item_File ;
+           rdfs:range :Target_Computer .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Test_coverage
+:Test_coverage rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Verification_Result_(SVR)> ;
+               rdfs:range :SW_High_Level_Requirements ,
+                          :SW_Low_Level_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/compatible_with
+:compatible_with rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Executable_Object_Code ,
+                             :SW_High_Level_Requirements ,
+                             :SW_Low_Level_Requirements ;
+                 rdfs:range :Target_Computer .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/complies_with
+:complies_with rdf:type owl:ObjectProperty ;
+               rdfs:domain :Source_Code ;
+               rdfs:range <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description> ,
+                          :SW_Low_Level_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/comply_with_and_traceble_to
+:comply_with_and_traceble_to rdf:type owl:ObjectProperty ;
+                             rdfs:domain :SW_Low_Level_Requirements ;
+                             rdfs:range :SW_High_Level_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/conforms
+:conforms rdf:type owl:ObjectProperty ;
+          rdfs:domain :SW_High_Level_Requirements ,
+                      :SW_Low_Level_Requirements ;
+          rdfs:range :SW_Requirement_Standard .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/conforms_to
+:conforms_to rdf:type owl:ObjectProperty ;
+             rdfs:domain :Source_Code ;
+             rdfs:range :SW_Code_Standard .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/has_Artifact
+:has_Artifact rdf:type owl:ObjectProperty ;
+              rdfs:domain :Objectives ;
+              rdfs:range :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/has_objective
+:has_objective rdf:type owl:ObjectProperty ;
+               rdfs:domain :Tables ;
+               rdfs:range :Objectives .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/satisfies
+:satisfies rdf:type owl:ObjectProperty ;
+           rdfs:domain :Objectives ;
+           rdfs:range :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/satisfiesWithIndependence
+:satisfiesWithIndependence rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Objectives ;
+                           rdfs:range :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/traceableTo
+:traceableTo rdf:type owl:ObjectProperty ;
+             rdfs:domain :SW_High_Level_Requirements ;
+             rdfs:range :System_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/traceable_to
+:traceable_to rdf:type owl:ObjectProperty ;
+              rdfs:domain :Source_Code ;
+              rdfs:range :SW_Low_Level_Requirements .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SCM_Records_(SCMR)
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SCM_Records_(SCMR)> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf :SW_Configuration_Management_and_SQA_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description> rdf:type owl:Class ;
+                                                                                                              rdfs:subClassOf :SW_Development_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Configuration_Index(SCI)
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Configuration_Index(SCI)> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf :SW_Configuration_Management_and_SQA_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Life_Cycle_Environment_Configuration_Index_(SECI)
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Life_Cycle_Environment_Configuration_Index_(SECI)> rdf:type owl:Class ;
+                                                                                                                               rdfs:subClassOf :SW_Configuration_Management_and_SQA_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Verification_Result_(SVR)
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Verification_Result_(SVR)> rdf:type owl:Class ;
+                                                                                                       rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)
+<http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)> rdf:type owl:Class ;
+                                                                                                           rdfs:subClassOf :SW_Development_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Artifacts
+:Artifacts rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Certification_Liaison_Process
+:Certification_Liaison_Process rdf:type owl:Class ;
+                               rdfs:subClassOf :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_A
+:DAL_A rdf:type owl:Class ;
+       rdfs:subClassOf :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_B
+:DAL_B rdf:type owl:Class ;
+       rdfs:subClassOf :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_C
+:DAL_C rdf:type owl:Class ;
+       rdfs:subClassOf :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_D
+:DAL_D rdf:type owl:Class ;
+       rdfs:subClassOf :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Executable_Object_Code
+:Executable_Object_Code rdf:type owl:Class ;
+                        rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Objectives
+:Objectives rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/PSAC
+:PSAC rdf:type owl:Class ;
+      rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Parameter_Data_Item_File
+:Parameter_Data_Item_File rdf:type owl:Class ;
+                          rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Planning_Artifacts
+:Planning_Artifacts rdf:type owl:Class ;
+                    rdfs:subClassOf :Artifacts ;
+                    owl:disjointWith :SW_Development_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Problem_Reports
+:Problem_Reports rdf:type owl:Class ;
+                 rdfs:subClassOf :SW_Configuration_Management_and_SQA_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SCMP
+:SCMP rdf:type owl:Class ;
+      rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SDP
+:SDP rdf:type owl:Class ;
+     rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SQAP
+:SQAP rdf:type owl:Class ;
+      rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SQA_Records
+:SQA_Records rdf:type owl:Class ;
+             rdfs:subClassOf :SW_Configuration_Management_and_SQA_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SVP
+:SVP rdf:type owl:Class ;
+     rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Accomplishment_Summary
+:SW_Accomplishment_Summary rdf:type owl:Class ;
+                           rdfs:subClassOf :Certification_Liaison_Process .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Code_Standard
+:SW_Code_Standard rdf:type owl:Class ;
+                  rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Configuration_Management_and_SQA_Artifacts
+:SW_Configuration_Management_and_SQA_Artifacts rdf:type owl:Class ;
+                                               rdfs:subClassOf :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Design_Standard
+:SW_Design_Standard rdf:type owl:Class ;
+                    rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Development_Artifacts
+:SW_Development_Artifacts rdf:type owl:Class ;
+                          rdfs:subClassOf :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_High_Level_Requirements
+:SW_High_Level_Requirements rdf:type owl:Class ;
+                            rdfs:subClassOf <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)> .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Low_Level_Requirements
+:SW_Low_Level_Requirements rdf:type owl:Class ;
+                           rdfs:subClassOf <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)> .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Requirement_Standard
+:SW_Requirement_Standard rdf:type owl:Class ;
+                         rdfs:subClassOf :Planning_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Verification_Artifacts
+:SW_Verification_Artifacts rdf:type owl:Class ;
+                           rdfs:subClassOf :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SW_Verification_Cases_and_Procedures
+:SW_Verification_Cases_and_Procedures rdf:type owl:Class ;
+                                      rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Software_Levels
+:Software_Levels rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Source_Code
+:Source_Code rdf:type owl:Class ;
+             rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/System_Requirements
+:System_Requirements rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#Software_Requirements_Data_(SRD)> .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Tables
+:Tables rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Target_Computer
+:Target_Computer rdf:type owl:Class ;
+                 rdfs:subClassOf :Artifacts .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Trace_Data
+:Trace_Data rdf:type owl:Class ;
+            rdfs:subClassOf :SW_Verification_Artifacts .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-1
+:A-1 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A1.1 ,
+                    :Obj_A1.2 ,
+                    :Obj_A1.3 ,
+                    :Obj_A1.4 ,
+                    :Obj_A1.5 ,
+                    :Obj_A1.6 ,
+                    :Obj_A1.7 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-10
+:A-10 rdf:type owl:NamedIndividual ,
+               :Tables ;
+      :has_objective :Obj_A10.1 ,
+                     :Obj_A10.2 ,
+                     :Obj_A10.3 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-2
+:A-2 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A2.1 ,
+                    :Obj_A2.2 ,
+                    :Obj_A2.3 ,
+                    :Obj_A2.4 ,
+                    :Obj_A2.5 ,
+                    :Obj_A2.6 ,
+                    :Obj_A2.7 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-3
+:A-3 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A3.1 ,
+                    :Obj_A3.2 ,
+                    :Obj_A3.3 ,
+                    :Obj_A3.4 ,
+                    :Obj_A3.5 ,
+                    :Obj_A3.6 ,
+                    :Obj_A3.7 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-4
+:A-4 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A4.1 ,
+                    :Obj_A4.10 ,
+                    :Obj_A4.11 ,
+                    :Obj_A4.12 ,
+                    :Obj_A4.13 ,
+                    :Obj_A4.2 ,
+                    :Obj_A4.3 ,
+                    :Obj_A4.4 ,
+                    :Obj_A4.5 ,
+                    :Obj_A4.6 ,
+                    :Obj_A4.7 ,
+                    :Obj_A4.8 ,
+                    :Obj_A4.9 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-5
+:A-5 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A5.1 ,
+                    :Obj_A5.2 ,
+                    :Obj_A5.3 ,
+                    :Obj_A5.4 ,
+                    :Obj_A5.5 ,
+                    :Obj_A5.6 ,
+                    :Obj_A5.7 ,
+                    :Obj_A5.8 ,
+                    :Obj_A5.9 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-6
+:A-6 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A6.1 ,
+                    :Obj_A6.2 ,
+                    :Obj_A6.3 ,
+                    :Obj_A6.4 ,
+                    :Obj_A6.5 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-7
+:A-7 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A7.1 ,
+                    :Obj_A7.2 ,
+                    :Obj_A7.3 ,
+                    :Obj_A7.4 ,
+                    :Obj_A7.5 ,
+                    :Obj_A7.6 ,
+                    :Obj_A7.7 ,
+                    :Obj_A7.8 ,
+                    :Obj_A7.9 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-8
+:A-8 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A8.1 ,
+                    :Obj_A8.2 ,
+                    :Obj_A8.3 ,
+                    :Obj_A8.4 ,
+                    :Obj_A8.5 ,
+                    :Obj_A8.6 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/A-9
+:A-9 rdf:type owl:NamedIndividual ,
+              :Tables ;
+     :has_objective :Obj_A9.1 ,
+                    :Obj_A9.2 ,
+                    :Obj_A9.3 ,
+                    :Obj_A9.4 ,
+                    :Obj_A9.5 .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_A
+:DAL_A rdf:type owl:NamedIndividual ,
+                :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_B
+:DAL_B rdf:type owl:NamedIndividual ,
+                :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_C
+:DAL_C rdf:type owl:NamedIndividual ,
+                :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/DAL_D
+:DAL_D rdf:type owl:NamedIndividual ,
+                :Software_Levels .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-1
+:HLR-1 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-1 ;
+       rdfs:label "Load Conditions for Retraction/Extension (CS 25.729(a)(1)(ii))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-2
+:HLR-2 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-1 ;
+       rdfs:label "Flight Load Resistance with Gear Extended (CS 25.729(a)(2))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-3
+:HLR-3 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-2 ;
+       rdfs:label "Landing Gear Locking Mechanism (CS 25.729(b))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-4
+:HLR-4 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-2 ;
+       rdfs:label "Emergency Operation (CS 25.729(c))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-5
+:HLR-5 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-5 ;
+       rdfs:label "Position Indicator and Warning System (CS 25.729(e))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-6
+:HLR-6 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-3 ;
+       rdfs:label "Brake Control Design (CS 25.735(c))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-7
+:HLR-7 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-3 ;
+       rdfs:label "Parking Brake Functionality (CS 25.735(d))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-8
+:HLR-8 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-3 ;
+       rdfs:label "Anti-Skid System Performance (CS 25.735(e))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/HLR-9
+:HLR-9 rdf:type owl:NamedIndividual ,
+                :SW_High_Level_Requirements ;
+       :Comply_with :SLR-4 ;
+       rdfs:label "Nose-Wheel Steering Failure Safety (CS 25.745(c))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-1
+:LLR-1 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-1 ,
+                                    :HLR-2 ;
+       rdfs:label "Load Factor for Flaps Extended (CS 25.729(a)(1)(iii))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-10
+:LLR-10 rdf:type owl:NamedIndividual ,
+                 :SW_Low_Level_Requirements ;
+        :comply_with_and_traceble_to :HLR-9 ;
+        rdfs:label "Nose-Wheel Steering Control Interference (CS 25.745(b))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-11
+:LLR-11 rdf:type owl:NamedIndividual ,
+                 :SW_Low_Level_Requirements ;
+        :comply_with_and_traceble_to :HLR-9 ;
+        rdfs:label "Towing Protection (CS 25.745(d))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-12
+:LLR-12 rdf:type owl:NamedIndividual ,
+                 :SW_Low_Level_Requirements ;
+        :comply_with_and_traceble_to :HLR-9 ;
+        rdfs:label "Nose-Wheel Off-Centre Landing (CS 25.745(e))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-13
+:LLR-13 rdf:type owl:NamedIndividual ,
+                 :SW_Low_Level_Requirements .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-2
+:LLR-2 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-1 ,
+                                    :HLR-2 ;
+       rdfs:label "Yaw Maneuver Design for Doors (CS 25.729(a)(3))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-3
+:LLR-3 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-3 ,
+                                    :HLR-5 ;
+       rdfs:label "Switch Design for Position Indicators (CS 25.729(e)(1))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-4
+:LLR-4 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-3 ,
+                                    :HLR-5 ;
+       rdfs:label "Aural Warning Timing and Design (CS 25.729(e)(3)-(6))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-5
+:LLR-5 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-4 ;
+       rdfs:label "Operation Test for Mechanisms (CS 25.729(d))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-6
+:LLR-6 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-8 ;
+       rdfs:label "Brake Kinetic Energy Absorption Testing (CS 25.735(f))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-7
+:LLR-7 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-7 ;
+       rdfs:label "Post-High Energy Stop Brake Condition (CS 25.735(g))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-8
+:LLR-8 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       rdfs:label "Stored Energy System Indication (CS 25.735(h))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/LLR-9
+:LLR-9 rdf:type owl:NamedIndividual ,
+                :SW_Low_Level_Requirements ;
+       :comply_with_and_traceble_to :HLR-6 ;
+       rdfs:label "Brake Wear Indicators (CS 25.735(i))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.1
+:Obj_A1.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "The activities of the software life cycle processes are defined." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.2
+:Obj_A1.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "The software life cycle(s), including the inter-relationships between the processes, their sequencing, feedback mechanisms, and transition criteria, is defined." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.3
+:Obj_A1.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Software life cycle environment is selected and defined." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.4
+:Obj_A1.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Additional considerations are addressed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.5
+:Obj_A1.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Software development standards are defined." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.6
+:Obj_A1.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Software plans comply with this document." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A1.7
+:Obj_A1.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Development and revision of software plans are coordinated." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A10.1
+:Obj_A10.1 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ,
+                      :DAL_C ,
+                      :DAL_D ;
+           :Description "Communication and understanding between the applicant and the certification authority is established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A10.2
+:Obj_A10.2 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ,
+                      :DAL_C ,
+                      :DAL_D ;
+           :Description "The means of compliance is proposed and agreement with the Plan for Software Aspects of Certification is obtained." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A10.3
+:Obj_A10.3 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ,
+                      :DAL_C ,
+                      :DAL_D ;
+           :Description "Compliance substantiation is provided." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.1
+:Obj_A2.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "High-level requirements are developed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.2
+:Obj_A2.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Derived high level requirements are defined and provided to the system processes, including the system safety assessment process." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.3
+:Obj_A2.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Software architecture is developed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.4
+:Obj_A2.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Low-level requirements are developed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.5
+:Obj_A2.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Derived low level requirements are defined and provided to the system processes, including the system safety assessment process." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.6
+:Obj_A2.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Source Code is developed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A2.7
+:Obj_A2.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Executable Object Code and Parameter Data Item Files, if any, are produced and loaded in the target computer." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.1
+:Obj_A3.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ,
+                     :DAL_D ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "High-level requirements comply with system requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.2
+:Obj_A3.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ,
+                     :DAL_D ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "High-level requirements are accurate and consistent." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.3
+:Obj_A3.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ;
+          :Description "High-level requirements are compatible with target computer." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.4
+:Obj_A3.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "High-level requirements are verifiable." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.5
+:Obj_A3.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "High-level requirements conform to standards." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.6
+:Obj_A3.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "High-level requirements are traceable to system requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A3.7
+:Obj_A3.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Algorithms are accurate." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.1
+:Obj_A4.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Low-level requirements comply with high-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.10
+:Obj_A4.10 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ;
+           :Description "Software architecture is compatible with target computer." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.11
+:Obj_A4.11 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ;
+           :Description "Software architecture is verifiable." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.12
+:Obj_A4.12 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_A ,
+                      :DAL_B ,
+                      :DAL_C ;
+           :Description "Software architecture conforms to standards." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.13
+:Obj_A4.13 rdf:type owl:NamedIndividual ,
+                    :Objectives ;
+           :satisfies :DAL_B ,
+                      :DAL_C ,
+                      :DAL_D ;
+           :satisfiesWithIndependence :DAL_A ;
+           :Description "Software partitioning integrity is confirmed." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.2
+:Obj_A4.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Low-level requirements are accurate and consistent." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.3
+:Obj_A4.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ;
+          :Description "Low-level requirements are compatible with target computer." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.4
+:Obj_A4.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ;
+          :Description "Low-level requirements are verifiable." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.5
+:Obj_A4.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Low-level requirements conform to standards." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.6
+:Obj_A4.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Low-level requirements are traceable to high-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.7
+:Obj_A4.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Algorithms are accurate." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.8
+:Obj_A4.8 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Software architecture is compatible with high-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A4.9
+:Obj_A4.9 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Software architecture is consistent." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.1
+:Obj_A5.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Source Code complies with low-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.2
+:Obj_A5.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Source Code complies with software architecture." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.3
+:Obj_A5.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ;
+          :Description "Source Code is verifiable." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.4
+:Obj_A5.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Source Code conforms to standards." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.5
+:Obj_A5.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Source Code is traceable to low-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.6
+:Obj_A5.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Source Code is accurate and consistent." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.7
+:Obj_A5.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ;
+          :Description "Output of software integration process is complete and correct." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.8
+:Obj_A5.8 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ,
+                     :DAL_D ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Parameter Data Item File is correct and complete" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A5.9
+:Obj_A5.9 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Verification of Parameter Data Item File is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A6.1
+:Obj_A6.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Executable Object Code complies with high-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A6.2
+:Obj_A6.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Executable Object Code is robust with high-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A6.3
+:Obj_A6.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Executable Object Code complies with low-level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A6.4
+:Obj_A6.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Executable Object Code is robust with low level requirements." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A6.5
+:Obj_A6.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Executable Object Code is compatible with target computer." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.1
+:Obj_A7.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Test procedures are correct." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.2
+:Obj_A7.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Test results are correct and discrepancies explained." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.3
+:Obj_A7.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Test coverage of high-level requirements is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.4
+:Obj_A7.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_B ,
+                     :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Test coverage of low-level requirements is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.5
+:Obj_A7.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Test coverage of software structure (modified condition/decision coverage) is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.6
+:Obj_A7.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Test coverage of software structure (decision coverage) is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.7
+:Obj_A7.7 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Test coverage of software structure (statement coverage) is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.8
+:Obj_A7.8 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_C ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ;
+          :Description "Test coverage of software structure (data coupling and control coupling) is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A7.9
+:Obj_A7.9 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ;
+          :Description "Verification of additional code, that cannot be traced to Source Code, is achieved." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.1
+:Obj_A8.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Configuration items are identified." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.2
+:Obj_A8.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Baselines and traceability are established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.3
+:Obj_A8.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Problem reporting, change control, change review, and configuration status accounting are established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.4
+:Obj_A8.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Archive, retrieval, and release are established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.5
+:Obj_A8.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Software load control is established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A8.6
+:Obj_A8.6 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfies :DAL_A ,
+                     :DAL_B ,
+                     :DAL_C ,
+                     :DAL_D ;
+          :Description "Software life cycle environment control is established." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A9.1
+:Obj_A9.1 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ,
+                                     :DAL_C ;
+          :Description "Assurance is obtained that software plans and standards are developed and reviewed for compliance with this document and for consistency." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A9.2
+:Obj_A9.2 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ,
+                                     :DAL_C ,
+                                     :DAL_D ;
+          :Description "Assurance is obtained that software life cycle processes comply with approved software plans." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A9.3
+:Obj_A9.3 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ,
+                                     :DAL_C ;
+          :Description "Assurance is obtained that software life cycle processes comply with approved software standards." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A9.4
+:Obj_A9.4 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ,
+                                     :DAL_C ;
+          :Description "Assurance is obtained that transition criteria for the software life cycle processes are satisfied." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/Obj_A9.5
+:Obj_A9.5 rdf:type owl:NamedIndividual ,
+                   :Objectives ;
+          :satisfiesWithIndependence :DAL_A ,
+                                     :DAL_B ,
+                                     :DAL_C ,
+                                     :DAL_D ;
+          :Description "Assurance is obtained that software conformity review is conducted." .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SLR-1
+:SLR-1 rdf:type owl:NamedIndividual ,
+                :System_Requirements ;
+       :Description "The landing gear extending and retracting mechanisms, wheel well doors, and supporting structures must be designed to withstand loads occurring in flight conditions with the gear retracted, including friction, inertia, brake torque, air loads, and gyroscopic loads during retraction/extension." ;
+       rdfs:label "Structural Integrity and Load Resistance (CS 25.729(a)(1))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SLR-2
+:SLR-2 rdf:type owl:NamedIndividual ,
+                :System_Requirements ;
+       :Description "The landing gear control system must provide an emergency means to extend the landing gear in case of failures in the normal extension/retraction system or loss of a single energy source (hydraulic, electric, or equivalent)." ;
+       rdfs:label "Safe Operation Under Failure Conditions (CS 25.729(c))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SLR-3
+:SLR-3 rdf:type owl:NamedIndividual ,
+                :System_Requirements ;
+       :Description "The brake system, including associated controls, must ensure the aircraft can be brought to a stop within a braked roll stopping distance not exceeding twice the landing distance specified in CS 25.125, even after a single failure or loss of energy supply." ;
+       rdfs:label "Brake System Capability (CS 25.735(b))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SLR-4
+:SLR-4 rdf:type owl:NamedIndividual ,
+                :System_Requirements ;
+       :Description "The nose-wheel steering system must be designed to require no exceptional skill during take-off, landing, cross-wind conditions, or sudden power-unit failure, ensuring safe operation under all conditions." ;
+       rdfs:label "Nose-Wheel Steering Safety (CS 25.745(a))" .
+
+
+###  http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81/SLR-5
+:SLR-5 rdf:type owl:NamedIndividual ,
+                :System_Requirements ;
+       rdfs:label "Indication and Warning (CS 25.729(e))" ,
+                  "The landing gear control system must provide clear, unambiguous indications and warnings to the flight crew regarding the position and status of the landing gear and associated doors, ensuring safe operation." .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SCM_Records_(SCMR)>
+                <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Configuration_Index(SCI)>
+                <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Life_Cycle_Environment_Configuration_Index_(SECI)>
+                :Problem_Reports
+                :SQA_Records
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Architechture/Design_Description>
+                :SW_High_Level_Requirements
+                :SW_Low_Level_Requirements
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/sayye/ontologies/2025/2/untitled-ontology-81#SW_Verification_Result_(SVR)>
+                :Executable_Object_Code
+                :Parameter_Data_Item_File
+                :SW_Verification_Cases_and_Procedures
+                :Source_Code
+                :Trace_Data
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Artifacts
+                :Objectives
+                :Software_Levels
+                :Tables
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Certification_Liaison_Process
+                :Planning_Artifacts
+                :SW_Configuration_Management_and_SQA_Artifacts
+                :SW_Development_Artifacts
+                :SW_Verification_Artifacts
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DAL_A
+                :DAL_B
+                :DAL_C
+                :DAL_D
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :PSAC
+                :SCMP
+                :SDP
+                :SQAP
+                :SVP
+                :SW_Code_Standard
+                :SW_Design_Standard
+                :SW_Requirement_Standard
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
